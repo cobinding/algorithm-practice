@@ -10,8 +10,5 @@ for _ in range(4):
 
 cnt = 0
 for item in graph:
-    for one in item:
-        if one == 1:
-            cnt += 1
-
+    cnt += sum(item)
 print(cnt)
