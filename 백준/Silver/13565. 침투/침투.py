@@ -8,6 +8,7 @@ visited = [[False]*n for _ in range(m)]
 d = [(0,1),(1,0),(-1,0),(0,-1)]
 
 def dfs(x,y):
+    if x == m-1 : print("YES"); exit()
     visited[x][y] = True
     
     for dx, dy in d:
@@ -15,7 +16,6 @@ def dfs(x,y):
         
         if 0 <= nx < m and 0 <= ny < n and not visited[nx][ny]:
             if graph[nx][ny] == '0':
-                if nx == m-1: print("YES"); exit()
                 visited[nx][ny] = True 
                 dfs(nx, ny)    
                
