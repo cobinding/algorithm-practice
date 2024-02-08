@@ -5,7 +5,7 @@ sys.setrecursionlimit(10**9)
 m,n = map(int, input().split())
 graph = [input().rstrip() for _ in range(m)]
 visited = [[False]*n for _ in range(m)]
-d = [(0,1),(1,0),(-1,0),(0,-1)]
+d = ((0,1),(1,0),(-1,0),(0,-1))
 
 def dfs(x,y):
     if x == m-1 : print("YES"); exit()
@@ -18,7 +18,6 @@ def dfs(x,y):
             if graph[nx][ny] == '0':
                 visited[nx][ny] = True 
                 dfs(nx, ny)    
-               
                 
 
 for j in range(n):
