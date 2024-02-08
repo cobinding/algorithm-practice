@@ -15,9 +15,10 @@ def dfs(x,y):
         
         if 0 <= nx < m and 0 <= ny < n and not visited[nx][ny]:
             if graph[nx][ny] == '0':
+                if nx == m-1: print("YES"); exit()
                 visited[nx][ny] = True 
                 dfs(nx, ny)    
-                if nx == m-1: print("YES"); exit()
+               
                 
 
 for j in range(n):
