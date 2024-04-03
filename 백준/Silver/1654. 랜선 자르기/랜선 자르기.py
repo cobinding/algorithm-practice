@@ -15,7 +15,8 @@ while left <= right:
 
     if cnt_lan < n:
         right=mid-1
-    else:
+    elif cnt_lan >= n:
         left=mid+1
+        ans=mid
 
-print(right)
+print(ans)
