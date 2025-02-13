@@ -3,11 +3,12 @@ from collections import deque
 
 n, m = map(int, input().split())
 position = list(map(int, input().split()))
-queue = deque([i for i in range(1, n+1)])
+queue = deque(range(1, n+1))
 
 cnt = 0
 i = 0
 target_cnt = 0
+
 while True:
     # 다 찾을 때까지 반복: O(NM) = 2500
     if target_cnt == len(position):
